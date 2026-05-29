@@ -4,7 +4,5 @@ COPY --from=rexezugebuild/appservicelauncher:latest /.AppServiceLauncher/ /.AppS
 
 ENV WEBSITES_PORT=8000
 
-EXPOSE 8000/tcp
-
 ENTRYPOINT ["/.AppServiceLauncher/launcher.sh"]
 CMD ["/entrypoint.sh"]
