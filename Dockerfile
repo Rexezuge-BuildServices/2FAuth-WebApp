@@ -1,6 +1,6 @@
 FROM 2fauth/2fauth
 
-RUN (timeout -s SIGINT 10s /usr/local/bin/entrypoint.sh) || true
+RUN sed -i 's/migrate:fresh/migrate/g' /usr/local/bin/entrypoint.sh
 
 COPY --from=rexezugebuild/appservicelauncher / /
 
