@@ -1,6 +1,6 @@
 FROM 2fauth/2fauth
 
-RUN timeout -s SIGINT 10s /usr/local/bin/entrypoint.sh
+RUN (timeout -s SIGINT 10s /usr/local/bin/entrypoint.sh) || true
 
 COPY --from=rexezugebuild/appservicelauncher / /
 
