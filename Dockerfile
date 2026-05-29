@@ -1,6 +1,6 @@
-FROM 2fauth/2fauth:latest
+FROM 2fauth/2fauth
 
-COPY --from=rexezugebuild/appservicelauncher:latest /.AppServiceLauncher/ /.AppServiceLauncher/
+COPY --from=rexezugebuild/appservicelauncher / /
 
 ENV WEBSITES_PORT=8000
 
