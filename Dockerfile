@@ -4,7 +4,7 @@ USER root:root
 
 RUN sed -i 's/migrate:fresh/migrate/g' /usr/local/bin/entrypoint.sh
 
-COPY --from=rexezugebuild/appservicelauncher / /
+COPY --from=rexezugebuild/appservicelauncher /.AppServiceLauncher /.AppServiceLauncher
 
 ENV WEBSITES_PORT=8000
 
