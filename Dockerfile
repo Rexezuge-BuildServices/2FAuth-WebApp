@@ -1,4 +1,4 @@
-FROM 2fauth/2fauth
+FROM 2fauth/2fauth:6.1.3
 
 USER root:root
 
